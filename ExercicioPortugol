@@ -1,0 +1,77 @@
+Var: 
+
+Nome, Endereço, Cidade, NomeDoPai, NomeDaMãe: Caracter  
+
+CPF, RG, Idade: inteiro 
+
+Peso, RendaBruta: real 
+
+Inicio 
+
+Escreva(“Digite o seu nome”) 
+
+Leia(nome) 
+
+Escreva(“digite o seu endereço”) 
+
+Leia(endereço) 
+
+Escreva(“Digite a cidade em que voce mora”) 
+
+Leia(Cidade) 
+
+Escreva(“Digite o nome do seu pai”) 
+
+Leia (NomeDoPai) 
+
+Escreva(“Digite o nome da sua mãe”) 
+
+Leia(NomeDaMae) 
+
+Escreva(“Digite seu cpf”) 
+
+Leia(CPF) 
+
+Escreva(“Digite seu rg”) 
+
+Leia(RG) 
+
+Escreva(“Digite sua idade”) 
+
+Leia(Idade) 
+
+Escreva(“Digite seu peso”) 
+
+Leia(Peso) 
+
+Escreva(“Digite sua renda Bruta”) 
+
+Leia(RendaBruta) 
+
+ 
+
+Escreva(“Nome: ”, Nome) 
+
+Escreva(“Endereço: ”, Endereço) 
+
+Escreva(“Cidade: ”, Cidade) 
+
+Escreva(“Nome do pai: ”, NomeDoPai) 
+
+Escreva(“Nome da mãe: ”, NomeDaMãe) 
+
+Escreva(“Idade: ”, idade) 
+
+Escreva(“CPF: ”, CPF) 
+
+Escreva(“RG: ”, RG) 
+
+Escreva(“Peso: ”, Peso) 
+
+Escreva(“Renda bruta: ”, RendaBruta) 
+
+ 
+
+fimalgoritmo 
+
+ 
