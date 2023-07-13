@@ -1,11 +1,4 @@
-1º lugar em Física: Platão
-2º lugar em Física: Sócrates
-3º lugar em Física: Aristóteles
-
-1º lugar em Matemática: Platão
-2º lugar em Matemática: Aristóteles
-3º lugar em Matemática: Sócrates
-
-1º lugar em Química: Sócrates
-2º lugar em Química: Platão
-3º lugar em Química: Aristóteles
+o professor destrinchou e abstraiu as informações e procurou padrões na formação
+ em que os alunos estão sentados, na qual se tem um padrão, em que a nas fileiras ímpares,
+ se tem pelo menos 3 pessoas que gostam de matemática, e nas fileiras de número par se tem pelo menos 3 pessoas que gostam de português,
+ analisando esse padrão,z o professor conseguiu definir quem trocou de posição 
