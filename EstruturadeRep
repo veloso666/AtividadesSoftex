@@ -1,0 +1,15 @@
+var
+numero, i, n: inteiro
+
+inicio 
+
+escreva("Digite um numero")
+leia(numero)
+
+
+para i de 1 até 10 faça
+	n <- numero * i
+	escreva(numero, "x",i,"=",n)
+      fimpara
+   fim
+fimalgoritmo
