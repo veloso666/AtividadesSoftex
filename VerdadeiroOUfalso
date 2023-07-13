@@ -1,0 +1,4 @@
+( V )Jogador 1: (120 >= 100) and (15 >= 5) and (Sim == Sim)
+( F )Jogador 2: (99 >= 100) and (200 >= 5) and (Não == Não)
+( V ) Jogador 3: (100 < 100) or (5 < 5) or (Sim == Sim)
+( F ) Jogador 4: (101 != 100) or (4 != 5) or not(Não == Não) 
