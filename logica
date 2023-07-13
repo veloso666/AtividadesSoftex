@@ -1,0 +1,9 @@
+Caractere nome <- “Nome: José Almeida da Silva” 
+
+Inteiro cpf <- 12345678900 
+
+Inteiro rg <- 9517530 
+
+Real altura <- 1,78 
+
+Caractere endereço <- Rua A, 380 – Centro – Recife/PE 
