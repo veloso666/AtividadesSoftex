@@ -1,0 +1,34 @@
+algoritmo DescobrirMeioTransporte
+
+escreva "É terrestre? (Sim/Não)"
+leia terrestre
+
+se terrestre = "Sim" então
+    escreva "Cabe apenas uma pessoa? (Sim/Não)"
+    leia apenasUmaPessoa
+
+    se apenasUmaPessoa = "Sim" então
+        // Pergunta: É pesado?
+        escreva "É pesado? (Sim/Não)"
+        leia pesado
+
+        se pesado = "Não" então
+            escreva "Tem pedal? (Sim/Não)"
+            leia temPedal
+
+            se temPedal = "Sim" então
+                escreva "bicicleta."
+            senão
+                escreva "moto."
+            fimse
+        senão
+            escreva "trator."
+        fimse
+    senão
+        escreva "moto."
+    fimse
+senão
+    escreva "Opção inválida."
+fimse
+
+fimalgoritmo
