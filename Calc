@@ -1,0 +1,10 @@
+var nota1, nota2, med;
+nota1 = 7;
+nota2 = 8;
+med = (nota1/nota2)/2
+
+if(med >= 7){
+console.log("Voce foi aprovado")
+}else{
+console.log(""Voce foi reprovado)
+}
