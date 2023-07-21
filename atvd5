@@ -1,0 +1,21 @@
+function categoriaHabilitacao(quantidadeRodas, pesoBrutoKg, quantidadePessoas) {
+  if (quantidadeRodas === 2 || quantidadeRodas === 3) {
+    return 'Categoria A';
+  } else if (quantidadeRodas === 4 && quantidadePessoas <= 8 && pesoBrutoKg <= 3500) {
+    return 'Categoria B';
+  } else if (quantidadeRodas >= 4 && pesoBrutoKg > 3500 && pesoBrutoKg <= 6000) {
+    return 'Categoria C';
+  } else if (quantidadeRodas >= 4 && quantidadePessoas > 8) {
+    return 'Categoria D';
+  } else if (quantidadeRodas >= 4 && pesoBrutoKg > 6000) {
+    return 'Categoria E';
+  } else {
+    return 'Veículo não se enquadra em nenhuma categoria conhecida.';
+  }
+}
+const quantidadeRodas = 4;
+const pesoBrutoKg = 2800;
+const quantidadePessoas = 5;
+
+const categoria = categoriaHabilitacao(quantidadeRodas, pesoBrutoKg, quantidadePessoas);
+console.log(`O veículo se enquadra na categoria: ${categoria}`);
