@@ -1,0 +1,12 @@
+function verificarAprovacao(nomeAluno, media, faltas) {
+  if (media < 7 || faltas > 3) {
+    return nomeAluno + " está reprovado.";
+  } else {
+    return nomeAluno + " está aprovado.";
+  }
+}
+
+// Exemplos de uso:
+console.log(verificarAprovacao("João", 6.5, 2));
+console.log(verificarAprovacao("Maria", 8.2, 4));
+console.log(verificarAprovacao("Pedro", 7.9, 1));
