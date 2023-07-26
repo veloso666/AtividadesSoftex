@@ -1,0 +1,25 @@
+function calc (op, num1, num2){
+  let med;
+  switch(op){
+    case 1:
+      med = num1 + num2
+      return med
+      break;
+    case 2:
+      med = num1 - num2
+      return med
+      break;
+    case 3:
+      med = num1 * num2
+      return med
+      break;
+    case 4:
+      med = num1 / num2
+      return med
+      break;
+    default:
+      console.log("Numero invalido")
+  }    
+}
+let numero1 = 2, numero2 = 2, oper = 1;
+console.log(calc(oper, numero1, numero2));
