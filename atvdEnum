@@ -1,0 +1,82 @@
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+const candidatos = {
+  candidato_X: 0,
+  candidato_Y: 0,
+  candidato_Z: 0,
+  branco: 0,
+  nulo: 0
+};
+
+function votar(candidato) {
+  switch (candidato.toLowerCase()) {
+    case 'x':
+      candidatos.candidato_X++;
+      break;
+    case 'y':
+      candidatos.candidato_Y++;
+      break;
+    case 'z':
+      candidatos.candidato_Z++;
+      break;
+    case 'branco':
+      candidatos.branco++;
+      break;
+    default:
+      candidatos.nulo++;
+  }
+}
+
+function mostrarResultado() {
+  console.log('\nResultado da Eleição:');
+  console.log('---------------------');
+  console.log(`candidato_X: ${candidatos.candidato_X}`);
+  console.log(`candidato_Y: ${candidatos.candidato_Y}`);
+  console.log(`candidato_Z: ${candidatos.candidato_Z}`);
+  console.log(`Votos em branco: ${candidatos.branco}`);
+  console.log(`Votos nulos: ${candidatos.nulo}`);
+
+  const votosTotais = Object.values(candidatos).reduce((total, voto) => total + voto, 0);
+  const votosValidos = votosTotais - candidatos.branco - candidatos.nulo;
+
+  const candidatoVencedor = Object.keys(candidatos).reduce((a, b) =>
+    candidatos[a] > candidatos[b] ? a : b
+  );
+
+  if (votosValidos > 0) {
+    console.log(`\nVotos válidos: ${votosValidos}`);
+    console.log(`Candidato vencedor: ${candidatoVencedor}`);
+  } else {
+    console.log('\nNenhum voto válido foi computado.');
+  }
+
+  rl.close();
+}
+
+function realizarVotacao() {
+  rl.question(
+    'Digite o candidato em quem deseja votar (candidato_X, candidato_Y, candidato_Z ou Branco), ou F para finalizar a votação: ',
+    (voto) => {
+      if (voto.toLowerCase() === 'f') {
+        mostrarResultado();
+      } else if (voto.toLowerCase() === 'x' || voto.toLowerCase() === 'y' || voto.toLowerCase() === 'z' || voto.toLowerCase() === 'branco') {
+        votar(voto);
+        realizarVotacao();
+      } else {
+        console.log('Voto inválido. Tente novamente.');
+        realizarVotacao();
+      }
+    }
+  );
+}
+
+console.log('Simulação de Eleição - Candidatos: candidato_X, candidato_Y, candidato_Z e Branco');
+console.log('Digite o nome do candidato ou "Branco" para votar nele.');
+console.log('Digite "F" para finalizar a votação.\n');
+
+realizarVotacao();
