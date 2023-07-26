@@ -1,0 +1,36 @@
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+function askQuestion(query) {
+  return new Promise((resolve) => rl.question(query, resolve));
+}
+
+async function getValidYear() {
+  let year;
+  do {
+    year = parseInt(await askQuestion('Digite o ano de nascimento (entre 1922 e 2021): '));
+  } while (isNaN(year) || year < 1922 || year > 2021);
+
+  return year;
+}
+
+async function main() {
+  const name = await askQuestion('Digite o nome completo: ');
+
+  let birthYear;
+  while (!birthYear) {
+    birthYear = await getValidYear().catch(console.error);
+  }
+
+  const currentYear = new Date().getFullYear();
+  const age = currentYear - birthYear;
+  console.log(`\nNome: ${name}`);
+  console.log(`Idade em 2022: ${age}`);
+  rl.close();
+}
+
+main();
