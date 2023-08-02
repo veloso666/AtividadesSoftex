@@ -1,0 +1,27 @@
+class Pessoa {
+  constructor(nome, idade, filho = null) {
+    this.nome = nome;
+    this.idade = idade;
+    this.filho = filho;
+  }
+}
+
+let pessoa1 = new Pessoa("Alice", 30);
+let pessoa2 = new Pessoa("Bob", 25);
+let pessoa3 = new Pessoa("Carol", 40);
+let pessoa4 = new Pessoa("David", 18);
+
+pessoa1.filho = pessoa2;
+pessoa2.filho = pessoa3;
+pessoa3.filho = pessoa4;
+
+function imprimirListaEncadeada(pessoa) {
+  let currentNode = pessoa;
+  while (currentNode !== null) {
+    console.log(`Nome: ${currentNode.nome}, Idade: ${currentNode.idade}`);
+    currentNode = currentNode.filho;
+  }
+}
+
+console.log("Lista Encadeada de Pessoas:");
+imprimirListaEncadeada(pessoa1);
