@@ -1,0 +1,21 @@
+
+let animais = [
+  // [Nome, Espécie, Idade]
+  ['Rex', 'Cachorro', 3],
+  ['Mittens', 'Gato', 5],
+  ['Bolt', 'Cachorro', 2],
+  ['Whiskers', 'Gato', 4],
+  ['Fluffy', 'Coelho', 1]
+];
+
+let animalSelecionado = 2; 
+if (animalSelecionado >= 0 && animalSelecionado < animais.length) {
+  let nome = animais[animalSelecionado][0];
+  let especie = animais[animalSelecionado][1];
+  let idade = animais[animalSelecionado][2];
+
+  // Exibindo as informações do animal selecionado
+  console.log(`Animal selecionado: ${nome}, Espécie: ${especie}, Idade: ${idade}`);
+} else {
+  console.log("Índice inválido. O animal selecionado não existe na matriz.");
+}
