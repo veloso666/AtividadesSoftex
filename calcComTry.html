@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora com try, catch e finally</title>
+</head>
+<body>
+
+<script>
+    function calcular(operacao, numero1, numero2) {
+        try {
+            if (isNaN(numero1) || isNaN(numero2)) {
+                throw new Error("Os valores informados não são números válidos.");
+            }
+
+            switch (operacao) {
+                case "+":
+                    return numero1 + numero2;
+                case "-":
+                    return numero1 - numero2;
+                case "*":
+                    return numero1 * numero2;
+                case "/":
+                    if (numero2 === 0) {
+                        throw new Error("Não é possível dividir por zero.");
+                    }
+                    return numero1 / numero2;
+                default:
+                    throw new Error("Operação inválida.");
+            }
+        } catch (error) {
+            return "Erro: " + error.message;
+        } finally {
+            console.log("Operação concluída.");
+        }
+    }
+
+    var operacao = prompt("Digite a operação (+, -, *, /):");
+    var numero1 = parseFloat(prompt("Digite o primeiro número:"));
+    var numero2 = parseFloat(prompt("Digite o segundo número:"));
+
+    var resultado = calcular(operacao, numero1, numero2);
+    alert("Resultado: " + resultado);
+</script>
+
+</body>
+</html>
