@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora Simples</title>
+</head>
+<body>
+
+<script>
+    // Recebendo os números e o operador usando prompt
+    var numero1 = parseFloat(prompt("Digite o primeiro número:"));
+    var operador = prompt("Digite o operador (+, -, *, /):");
+    var numero2 = parseFloat(prompt("Digite o segundo número:"));
+
+    var resultado;
+
+    // Realizando a operação com base no operador fornecido
+    switch (operador) {
+        case '+':
+            resultado = numero1 + numero2;
+            break;
+        case '-':
+            resultado = numero1 - numero2;
+            break;
+        case '*':
+            resultado = numero1 * numero2;
+            break;
+        case '/':
+            if (numero2 !== 0) {
+                resultado = numero1 / numero2;
+            } else {
+                resultado = "Erro: Divisão por zero!";
+            }
+            break;
+        default:
+            resultado = "Operador inválido";
+            break;
+    }
+
+    // Exibindo o resultado
+    alert("Resultado: " + resultado);
+</script>
+
+</body>
+</html>
